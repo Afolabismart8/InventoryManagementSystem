@@ -9,10 +9,11 @@ const ProductRoute = require ("../inventoryManagemnt/routes/productRoute");
 const userRoute = require ("../inventoryManagemnt/routes/userRoute");
 
 //EndRoutes
-app.use("/api",ProductRoute);
 app.use ("/api", userRoute);
+app.use("/ProductApi",ProductRoute);
 
-const PORT = process.env.PORT || 2000
+
+const PORT = process.env.PORT 
 app.listen (PORT, ()=> (
     console.log(`Server is Live ${PORT}`)
 ))
